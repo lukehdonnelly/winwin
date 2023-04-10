@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinWin - Sell Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            color: white;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .sell-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .sell-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sell-container label {
+            font-weight: bold;
+        }
+
+        .sell-container input, select, textarea {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .sell-container button {
+            background-color: #3d3d3d;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        .sell-container button:hover {
+            background-color: #5d5d5d;
+        }
+        .success-alert {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+.error-alert {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+        <a href="sell.html">Sell Items</a>
+        <a href="how.html">How it Works</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <section class="sell-container">
+        <h2>List your item for sale</h2>
+        <form id="sell-item-form">
+            <input type="text" name="name" placeholder="Item name" />
+            <input type="text" name="description" placeholder="Item description" />
+            <select name="category" placeholder="Item category">
+                <option value="Cars">Cars</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Books">Books</option>
+                <option value="Films">Films</option>
+            </select>
+            <input type="number" name="price" placeholder="Item price" />
+            <button type="submit">Submit</button>
+          </form>          
+    </section>
+    <script src="sell.js"></script>
+</body>
+</html>

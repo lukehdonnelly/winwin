@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinWin - FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            color: white;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .faq-container {
+            padding: 50px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .faq {
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: #3d3d3d;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            padding: 10px;
+            display: none;
+        }
+    </style>
+
+    <script>
+        function toggleAnswer(element) {
+            var answer = element.nextElementSibling;
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+        <a href="sell.html">Sell Items</a>
+        <a href="how.html">How it Works</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <section class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+            <div class="faq-question" onclick="toggleAnswer(this)">Question 1: How do I create an account?</div>
+            <div class="faq-answer">
+                <p>Answer: To create an account, click on the "Sign Up" button on the homepage and follow the instructions to provide your personal information and create a username and password.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question" onclick="toggleAnswer(this)">Question 2: How do I purchase tokens?</div>
+            <div class="faq-answer">
+                <p>Answer: Once you have created an account and logged in, navigate to the "Buy Tokens" section of the website. Select the desired number of tokens and proceed to the payment gateway to complete your purchase.</p>
+            </div>
+        </div>
+
+        <!-- Add more FAQs as needed -->
+
+    </section>
+</body>
+</html>
